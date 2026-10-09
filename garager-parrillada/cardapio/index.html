@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardápio — GaraGer Parrillada Uruguaya</title>
+<meta name="description" content="Cardápio completo do GaraGer: parrilla uruguaia, cortes, empanadas, sobremesas, drinks, pizzas a lenha e hambúrgueres. Rua Texas, 749 — Brooklin, SP.">
+<meta name="theme-color" content="#14100d">
+<link rel="icon" href="../img/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--char:#14100d;--char-2:#1d1713;--line:#3a2f27;--paper:#efe6d6;--ink:#1b1511;--azul:#1f4e9c;--sol:#f2c230;--brasa:#e2541b;--muted:#a89886;
+--display:"Big Shoulders Display",Impact,sans-serif;--serif:"Newsreader",Georgia,serif;--mono:"Space Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{background:var(--char);color:var(--paper);font-family:var(--serif);font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;text-decoration:none;padding:12px 16px;border:2px solid currentColor;white-space:nowrap}
+.btn.fill{background:var(--sol);color:var(--ink);border-color:var(--sol)}
+.btn:hover{box-shadow:4px 4px 0 currentColor;transform:translate(-2px,-2px)}
+.btn.fill:hover{box-shadow:4px 4px 0 var(--brasa)}
+
+/* top */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,4vw,40px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:46px;height:46px}
+.brand b{font-family:var(--display);font-weight:900;font-size:1.5rem;line-height:1}
+.brand b i{font-style:normal;color:var(--sol)}
+.back{color:var(--muted);text-decoration:none}.back:hover{color:var(--sol)}
+
+.hero{padding:clamp(48px,8vw,96px) 0 clamp(28px,4vw,44px);display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.hero .k{color:var(--brasa);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.hero .k::before{content:"";width:34px;height:2px;background:currentColor}
+.hero h1{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(3.2rem,10vw,7.5rem);line-height:.85}
+.hero h1 em{font-family:var(--serif);font-weight:400;font-style:italic;text-transform:none;color:var(--sol)}
+.hero p{max-width:38ch;color:#cdbfae}
+
+/* chips */
+.chips{position:sticky;top:0;z-index:20;background:rgba(20,16,13,.94);backdrop-filter:blur(8px);border-block:1px solid var(--line)}
+.chips nav{display:flex;gap:6px;overflow-x:auto;padding:12px clamp(16px,4vw,40px);scrollbar-width:none}
+.chips nav::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:9px 12px;border:1px solid var(--line);color:#cdbfae}
+.chips a:hover{border-color:var(--sol);color:var(--sol)}
+.chips a.on{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.chips a.sep{margin-left:10px}
+
+/* groups */
+.grp{padding:clamp(40px,6vw,70px) 0}
+.grp + .grp{border-top:2px solid var(--sol)}
+.grp-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.grp-h h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(2.2rem,5vw,3.6rem);line-height:.9}
+.grp-h p{font-style:italic;color:var(--muted)}
+.pages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,36px)}
+.pg figcaption{display:flex;align-items:baseline;gap:12px;font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.35rem;margin-bottom:10px}
+.pg figcaption .mono{color:var(--sol)}
+.zoom{all:unset;display:block;cursor:zoom-in;position:relative;border:1px solid var(--line);background:#222;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.zoom img{display:block;width:100%;height:auto;aspect-ratio:1240/1754}
+.zoom::after{content:"⤢ ampliar";position:absolute;right:10px;bottom:10px;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;background:var(--sol);color:var(--ink);padding:6px 8px;opacity:0;transition:opacity .2s}
+.zoom:hover::after,.zoom:focus-visible::after{opacity:1}
+.zoom:focus-visible{outline:3px solid var(--sol);outline-offset:3px}
+@media(max-width:760px){.pages{grid-template-columns:1fr}.zoom::after{opacity:1}}
+
+/* cta */
+.cta{background:var(--paper);color:var(--ink);padding:clamp(40px,6vw,64px) 0}
+.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(2rem,5vw,3.4rem);line-height:.9}
+.cta h2 em{font-family:var(--serif);font-weight:400;font-style:italic;text-transform:none;color:var(--azul)}
+.cta .row{display:flex;gap:12px;flex-wrap:wrap}
+footer{padding:28px 0;color:var(--muted)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:#0d0a08;display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.lb-bar b{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.2rem}
+.lb-bar .ctr{color:var(--muted);margin-left:10px}
+.lb-btns{display:flex;gap:6px}
+.lb button.ic{all:unset;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);font-family:var(--mono);font-size:1rem;color:var(--paper)}
+.lb button.ic:hover{border-color:var(--sol);color:var(--sol)}
+.lb-view{flex:1;overflow:auto;display:flex;justify-content:center;align-items:flex-start;padding:16px;touch-action:pan-x pan-y pinch-zoom}
+.lb-view img{width:auto;max-width:100%;max-height:calc(100vh - 100px);height:auto;cursor:zoom-in;user-select:none}
+.lb.z .lb-view img{max-width:none;max-height:none;width:1240px;cursor:zoom-out}
+.lb .nav{all:unset;position:absolute;top:50%;transform:translateY(-50%);cursor:pointer;width:46px;height:64px;display:grid;place-items:center;background:var(--sol);color:var(--ink);font-family:var(--display);font-weight:900;font-size:1.6rem}
+.lb .prev{left:12px}.lb .next{right:12px}
+@media(max-width:760px){.lb .nav{width:38px;height:52px}.lb-view{padding:8px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../" aria-label="GaraGer — início"><img src="../img/logo.webp" alt="" width="46" height="46"><b>Gara<i>Ger</i></b></a>
+  <div style="display:flex;gap:16px;align-items:center">
+    <a class="back mono" href="../">← Voltar ao site</a>
+    <a class="btn fill" href="https://wa.me/5511993956402?text=Ol%C3%A1!%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20gostaria%20de%20reservar%20uma%20mesa" target="_blank" rel="noopener">Reservar</a>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div>
+    <div class="k mono">Menu completo</div>
+    <h1>Cardá<br>pio <em>de la casa</em></h1>
+  </div>
+  <p>Toque em qualquer página para ampliar. No celular, dá pra dar zoom com os dedos.</p>
+</div>
+
+<div class="chips"><nav aria-label="Seções do cardápio">
+<a href="#entradas" data-t="entradas">Entradas</a>
+<a href="#empanadas" data-t="empanadas">Empanadas & menuzinho</a>
+<a href="#cortes" data-t="cortes">Cortes</a>
+<a href="#cozinha" data-t="cozinha">Cozinha</a>
+<a href="#parrilla" data-t="parrilla">Parrilla</a>
+<a href="#sobremesas" data-t="sobremesas">Sobremesas</a>
+<a href="#executivo" data-t="executivo">Menu executivo</a>
+<a href="#cervejas" data-t="cervejas">Cervejas</a>
+<a href="#drinks" data-t="drinks">Drinks, doses & caipirinhas</a>
+<a href="#bebidas" data-t="bebidas">Bebidas & sucos</a>
+<a class="sep" href="#classicas" data-t="classicas">Pizzas clássicas</a>
+<a href="#premium" data-t="premium">Pizzas premium</a>
+<a href="#burgers" data-t="burgers">Hambúrgueres</a>
+</nav></div>
+
+<main class="wrap">
+  <section class="grp" id="carta">
+    <header class="grp-h"><h2>Carta da casa</h2><p>Parrilla, cozinha, sobremesas e bebidas</p></header>
+    <div class="pages">
+      <figure class="pg" id="entradas">
+        <figcaption><span class="mono">01</span>Entradas</figcaption>
+        <button class="zoom" data-i="0" aria-label="Ampliar: Entradas">
+          <img src="img/carta-01.webp" srcset="img/thumb-carta-01.webp 420w, img/carta-01.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Entradas" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="empanadas">
+        <figcaption><span class="mono">02</span>Empanadas & menuzinho</figcaption>
+        <button class="zoom" data-i="1" aria-label="Ampliar: Empanadas & menuzinho">
+          <img src="img/carta-02.webp" srcset="img/thumb-carta-02.webp 420w, img/carta-02.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Empanadas & menuzinho" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="cortes">
+        <figcaption><span class="mono">03</span>Cortes</figcaption>
+        <button class="zoom" data-i="2" aria-label="Ampliar: Cortes">
+          <img src="img/carta-03.webp" srcset="img/thumb-carta-03.webp 420w, img/carta-03.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Cortes" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="cozinha">
+        <figcaption><span class="mono">04</span>Cozinha</figcaption>
+        <button class="zoom" data-i="3" aria-label="Ampliar: Cozinha">
+          <img src="img/carta-04.webp" srcset="img/thumb-carta-04.webp 420w, img/carta-04.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Cozinha" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="parrilla">
+        <figcaption><span class="mono">05</span>Parrilla</figcaption>
+        <button class="zoom" data-i="4" aria-label="Ampliar: Parrilla">
+          <img src="img/carta-05.webp" srcset="img/thumb-carta-05.webp 420w, img/carta-05.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Parrilla" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="sobremesas">
+        <figcaption><span class="mono">06</span>Sobremesas</figcaption>
+        <button class="zoom" data-i="5" aria-label="Ampliar: Sobremesas">
+          <img src="img/carta-06.webp" srcset="img/thumb-carta-06.webp 420w, img/carta-06.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Sobremesas" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="executivo">
+        <figcaption><span class="mono">07</span>Menu executivo</figcaption>
+        <button class="zoom" data-i="6" aria-label="Ampliar: Menu executivo">
+          <img src="img/carta-07.webp" srcset="img/thumb-carta-07.webp 420w, img/carta-07.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Menu executivo" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="cervejas">
+        <figcaption><span class="mono">08</span>Cervejas</figcaption>
+        <button class="zoom" data-i="7" aria-label="Ampliar: Cervejas">
+          <img src="img/carta-08.webp" srcset="img/thumb-carta-08.webp 420w, img/carta-08.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Cervejas" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="drinks">
+        <figcaption><span class="mono">09</span>Drinks, doses & caipirinhas</figcaption>
+        <button class="zoom" data-i="8" aria-label="Ampliar: Drinks, doses & caipirinhas">
+          <img src="img/carta-09.webp" srcset="img/thumb-carta-09.webp 420w, img/carta-09.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Drinks, doses & caipirinhas" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="bebidas">
+        <figcaption><span class="mono">10</span>Bebidas & sucos</figcaption>
+        <button class="zoom" data-i="9" aria-label="Ampliar: Bebidas & sucos">
+          <img src="img/carta-10.webp" srcset="img/thumb-carta-10.webp 420w, img/carta-10.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Bebidas & sucos" loading="lazy" decoding="async">
+        </button>
+      </figure>
+    </div>
+  </section>
+  <section class="grp" id="pizzas">
+    <header class="grp-h"><h2>Pizzas & burgers</h2><p>Forno a lenha, massa de longa fermentação</p></header>
+    <div class="pages">
+      <figure class="pg" id="classicas">
+        <figcaption><span class="mono">11</span>Pizzas clássicas</figcaption>
+        <button class="zoom" data-i="10" aria-label="Ampliar: Pizzas clássicas">
+          <img src="img/pizza-1.webp" srcset="img/thumb-pizza-1.webp 420w, img/pizza-1.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Pizzas clássicas" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="premium">
+        <figcaption><span class="mono">12</span>Pizzas premium</figcaption>
+        <button class="zoom" data-i="11" aria-label="Ampliar: Pizzas premium">
+          <img src="img/pizza-2.webp" srcset="img/thumb-pizza-2.webp 420w, img/pizza-2.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Pizzas premium" loading="lazy" decoding="async">
+        </button>
+      </figure>
+      <figure class="pg" id="burgers">
+        <figcaption><span class="mono">13</span>Hambúrgueres</figcaption>
+        <button class="zoom" data-i="12" aria-label="Ampliar: Hambúrgueres">
+          <img src="img/pizza-3.webp" srcset="img/thumb-pizza-3.webp 420w, img/pizza-3.webp 1240w" sizes="(max-width:760px) 100vw, 560px" width="1240" height="1754" alt="Cardápio GaraGer — Hambúrgueres" loading="lazy" decoding="async">
+        </button>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Já sabe o que vai pedir?<br><em>Garanta a mesa.</em></h2>
+    <div class="row">
+      <a class="btn" style="background:var(--azul);color:#fff;border-color:var(--azul)" href="https://wa.me/5511993956402?text=Ol%C3%A1!%20Vi%20o%20card%C3%A1pio%20no%20site%20e%20gostaria%20de%20reservar%20uma%20mesa" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+      <a class="btn" href="../#local">Como chegar</a>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap mono">GaraGer · Parrillada Uruguaya · Rua Texas, 749 · Brooklin · SP · Preços sujeitos a alteração</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Página do cardápio ampliada">
+  <div class="lb-bar">
+    <div><b id="lbT"></b><span class="ctr mono" id="lbC"></span></div>
+    <div class="lb-btns"><button class="ic" id="lbZ" aria-label="Zoom">＋</button><button class="ic" id="lbX" aria-label="Fechar">✕</button></div>
+  </div>
+  <div class="lb-view" id="lbV"><img id="lbI" alt=""></div>
+  <button class="nav prev" id="lbP" aria-label="Anterior">‹</button>
+  <button class="nav next" id="lbN" aria-label="Próxima">›</button>
+</div>
+
+<script>
+(()=>{
+const figs=[...document.querySelectorAll('.pg')];
+const pages=figs.map(f=>({id:f.id,t:f.querySelector('figcaption').lastChild.textContent.trim(),src:f.querySelector('img').getAttribute('src')}));
+const lb=document.getElementById('lb'),I=document.getElementById('lbI'),T=document.getElementById('lbT'),C=document.getElementById('lbC'),V=document.getElementById('lbV');
+let cur=0,last=null;
+function show(i){cur=(i+pages.length)%pages.length;const p=pages[cur];I.src=p.src;I.alt='Cardápio — '+p.t;T.textContent=p.t;C.textContent=(cur+1)+' / '+pages.length;lb.classList.remove('z');V.scrollTo(0,0);
+  [cur-1,cur+1].forEach(k=>{const q=pages[(k+pages.length)%pages.length];new Image().src=q.src})}
+function open(i){last=document.activeElement;show(i);lb.classList.add('open');document.body.style.overflow='hidden';document.getElementById('lbX').focus()}
+function close(){lb.classList.remove('open');document.body.style.overflow='';last&&last.focus()}
+document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>open(+b.dataset.i)));
+document.getElementById('lbX').onclick=close;
+document.getElementById('lbP').onclick=()=>show(cur-1);
+document.getElementById('lbN').onclick=()=>show(cur+1);
+const zoom=()=>lb.classList.toggle('z');
+document.getElementById('lbZ').onclick=zoom;I.addEventListener('click',zoom);
+lb.addEventListener('click',e=>{if(e.target===V)close()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+let sx=null;V.addEventListener('touchstart',e=>{if(e.touches.length===1&&!lb.classList.contains('z'))sx=e.touches[0].clientX},{passive:true});
+V.addEventListener('touchend',e=>{if(sx==null)return;const dx=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(dx)>60)show(cur+(dx<0?1:-1))});
+
+// chip ativo
+const chips=new Map([...document.querySelectorAll('.chips a')].map(a=>[a.dataset.t,a]));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){chips.forEach(a=>a.classList.remove('on'));const a=chips.get(e.target.id);a.classList.add('on');const n=a.parentNode;n.scrollTo({left:a.offsetLeft-n.clientWidth/2+a.clientWidth/2,behavior:'smooth'})}}),{rootMargin:'-40% 0px -55% 0px'});
+figs.forEach(f=>io.observe(f));
+// abrir direto por hash de grupo (#pizzas) já funciona; #pagina abre a página
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+Coloque aqui as fotos do restaurante (JPG, ~1600px no maior lado):
+fachada.jpg · parrilla.jpg · bife.jpg · salao.jpg · churros.jpg
+Sem as fotos, a galeria mostra blocos de placeholder rotulados.
