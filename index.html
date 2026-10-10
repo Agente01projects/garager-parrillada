@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GaraGer — Parrillada Uruguaya · Brooklin, São Paulo</title>
-<meta name="description" content="Parrillada uruguaia na brasa no Brooklin, São Paulo. Rua Texas, 749. Reservas pelo WhatsApp (11) 99395-6402.">
+<title>GaraGer | Parrilla y Pizza — Parrillada Uruguaya no Brooklin, SP</title>
+<meta name="description" content="Autêntica parrilla uruguaia no Brooklin, SP: cortes Angus uruguaios na brasa, almoço executivo de terça a sexta, pizzas e hambúrgueres artesanais no jantar. Rua Texas, 749. Reservas: (11) 99395-6402.">
 <meta property="og:title" content="GaraGer — Parrillada Uruguaya">
 <meta property="og:description" content="Fogo de lenha, sal grosso e paciência. Rua Texas, 749 — Brooklin, SP.">
 <meta name="theme-color" content="#14100d">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Restaurant","name":"GaraGer — Parrillada Uruguaya","servesCuisine":["Uruguaia","Parrilla","Pizza"],"telephone":"+55 11 99395-6402","address":{"@type":"PostalAddress","streetAddress":"Rua Texas, 749","addressLocality":"São Paulo","addressRegion":"SP","postalCode":"04557-000","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"11:45","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"18:45","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"11:45","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:45","closes":"17:00"}],"acceptsReservations":"True"}
+{"@context":"https://schema.org","@type":"Restaurant","name":"GaraGer | Parrilla y Pizza","servesCuisine":["Uruguaia","Parrilla","Pizza","Hambúrguer"],"telephone":"+55 11 99395-6402","address":{"@type":"PostalAddress","streetAddress":"Rua Texas, 749","addressLocality":"São Paulo","addressRegion":"SP","postalCode":"04557-000","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"11:45","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"18:45","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"11:45","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:45","closes":"17:00"}],"acceptsReservations":"True"}
 </script>
 <style>
 :root{
@@ -217,6 +217,8 @@ section{position:relative;scroll-margin-top:70px}
 .hours td{padding:13px 0;border-bottom:1px dashed #3a2f27;font-size:1.02rem}
 .hours td:first-child{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.25rem;letter-spacing:.02em}
 .hours td:last-child{text-align:right;font-family:var(--mono);font-size:.82rem;color:#cdbfae}
+.hours tr.closed td{color:#6f6256}
+.hours-note{margin-top:18px;color:var(--muted);font-size:1rem;font-style:italic}
 .hours tr.today td{color:var(--sol)}
 .hours tr.today td:first-child::after{content:" · hoje";font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;vertical-align:middle}
 
@@ -314,7 +316,7 @@ footer{padding:80px 0 34px;border-top:1px solid #2e2620}
   <canvas id="sparks" aria-hidden="true"></canvas>
   <div class="hero-in">
     <div class="sign"><div class="band"><h1>Parrillada<br><span>Uruguaya</span></h1></div></div>
-    <p>Fogo de lenha, sal grosso e paciência. Uma garagem no Brooklin com um pedaço de Montevideo dentro.</p>
+    <p>Cortes Angus uruguaios na brasa, sal grosso e paciência. Uma garagem no Brooklin com um pedaço de Montevideo dentro.</p>
     <div class="row">
       <a class="btn fill" href="#reserva">Reservar mesa</a>
       <a class="btn" href="cardapio/">Ver cardápio</a>
@@ -338,7 +340,7 @@ footer{padding:80px 0 34px;border-top:1px solid #2e2620}
       <div>
         <div class="kicker mono">El asado uruguayo</div>
         <h2 class="h2">No Uruguai,<br>churrasco é <em>domingo</em><br>em família.</h2>
-        <p class="lead" style="margin-top:24px">A gente trouxe isso pra uma garagem na Rua Texas. Cortes generosos, provolone derretendo na grelha, vinho na mesa e ninguém com pressa de ir embora.</p>
+        <p class="lead" style="margin-top:24px">A gente trouxe isso pra uma garagem na Rua Texas: cortes Angus uruguaios, provolone derretendo na grelha, sobremesas artesanais e cervejas tradicionais do Uruguai. Ninguém com pressa de ir embora.</p>
       </div>
       <svg class="sun" viewBox="-100 -100 200 200" aria-hidden="true">
         <g fill="#f2c230" id="rays"></g>
@@ -366,7 +368,7 @@ footer{padding:80px 0 34px;border-top:1px solid #2e2620}
         <div class="kicker mono">Carta</div>
         <h2 class="h2">O que sai<br>da <em>brasa</em></h2>
       </div>
-      <p class="lead" style="max-width:38ch">Alguns destaques. Preços, drinks e todas as seções no cardápio completo.</p>
+      <p class="lead" style="max-width:38ch">À la carte, almoço executivo de terça a sexta e, à noite, pizzas e hambúrgueres artesanais. Preços e todas as seções no cardápio completo.</p>
     </div>
 
     <div class="tabs" role="tablist" aria-label="Categorias do cardápio">
@@ -377,10 +379,10 @@ footer{padding:80px 0 34px;border-top:1px solid #2e2620}
     </div>
 
     <div class="panel on" id="p1" role="tabpanel" aria-labelledby="t1">
-      <article class="item"><span class="tag mono">Destaque</span><h3>Bife ancho</h3><p>Fatiado na tábua, rosado por dentro. <span class="es">Pedí jugoso.</span></p></article>
+      <article class="item"><span class="tag mono">Angus uruguaio</span><h3>Bife ancho</h3><p>Fatiado na tábua, rosado por dentro. <span class="es">Pedí jugoso.</span></p></article>
       <article class="item"><span class="tag mono">Uruguai</span><h3>Assado de tira</h3><p>A costela em tiras, o corte mais uruguaio da parrilla.</p></article>
       <article class="item"><span class="tag mono">Corte</span><h3>Vazio & entraña</h3><p>Dois cortes de fibra longa, macios e cheios de sabor.</p></article>
-      <article class="item"><span class="tag mono">Também</span><h3>Bife chorizo & cordeiro</h3><p>Para quem quer variar entre o boi e o cordeiro na brasa.</p></article>
+      <article class="item"><span class="tag mono">Ter a sex</span><h3>Almoço executivo</h3><p>Bife ancho, bife de chorizo, entraña ou coxa desossada, com 2 acompanhamentos e sobremesa. Exceto feriados.</p></article>
     </div>
     <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2">
       <article class="item"><span class="tag mono">Entrada</span><h3>Provolone na brasa</h3><p>Com tomate-cereja, orégano e cesta de pães.</p></article>
@@ -395,9 +397,9 @@ footer{padding:80px 0 34px;border-top:1px solid #2e2620}
       <article class="item"><span class="tag mono">Pra fechar</span><h3>Alfajor artesanal</h3><p>Com café expresso.</p></article>
     </div>
     <div class="panel" id="p4" role="tabpanel" aria-labelledby="t4">
-      <article class="item"><span class="tag mono">Forno a lenha</span><h3>Pizza de longa fermentação</h3><p>Massa de 48 a 72h, aberta à mão, cerca de 35 cm. Dá pra pedir meio a meio.</p></article>
+      <article class="item"><span class="tag mono">Só no jantar</span><h3>Pizza artesanal de longa fermentação</h3><p>Massa de 48 a 72h, aberta à mão, cerca de 35 cm. Dá pra pedir meio a meio.</p></article>
       <article class="item"><span class="tag mono">Sabores</span><h3>Marinara, Castelões, Parma & rúcula</h3><p>Entre outros. Lista completa no cardápio.</p></article>
-      <article class="item"><span class="tag mono">Burgers</span><h3>Burgers</h3><p>Também saem da casa. Confira as opções no cardápio.</p></article>
+      <article class="item"><span class="tag mono">Só no jantar</span><h3>Hambúrgueres artesanais</h3><p>Pão brioche e carne de 190 g. Opções no cardápio completo.</p></article>
     </div>
 
     <div class="menu-cta">
@@ -540,6 +542,7 @@ footer{padding:80px 0 34px;border-top:1px solid #2e2620}
       <h2 class="h2">A brasa<br>está <em>acesa?</em></h2>
       <div class="status mono" id="status"><span class="dot"></span><span id="statusTxt">Verificando…</span></div>
       <table class="hours" id="hours"><tbody></tbody></table>
+      <p class="hours-note">À la carte em todos os horários. Almoço executivo de terça a sexta (exceto feriados). Pizzas e hambúrgueres artesanais nos jantares.</p>
     </div>
 
     <form class="ticket" id="resForm" novalidate>
@@ -770,21 +773,23 @@ if(!RM){new IntersectionObserver(([e])=>{const v=e.isIntersecting;if(v&&!steamOn
 
 /* ================= HORÁRIOS ================= */
 // minutos do dia: 11:45=705, 15h=900, 16h=960, 17h=1020, 18:45=1125, 22h=1320
-const SCH={0:[[705,1020]],1:[[705,900],[1125,1320]],2:[[705,900],[1125,1320]],3:[[705,900],[1125,1320]],4:[[705,900],[1125,1320]],5:[[705,900],[1125,1320]],6:[[705,960],[1125,1320]]};
+const SCH={0:[[705,1020]],1:[],2:[[705,900],[1125,1320]],3:[[705,900],[1125,1320]],4:[[705,900],[1125,1320]],5:[[705,900],[1125,1320]],6:[[705,960],[1125,1320]]};
 const DN=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
 const hm=m=>`${Math.floor(m/60)}h${m%60?String(m%60).padStart(2,'0'):''}`;
 function spNow(){const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
   const g=k=>f.find(x=>x.type===k).value;return{d:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),m:+g('hour')*60+ +g('minute')}}
 function renderHours(){const{d,m}=spNow(),tb=document.querySelector('#hours tbody');
   const order=[1,2,3,4,5,6,0];
-  tb.innerHTML=order.map(i=>`<tr class="${i===d?'today':''}"><td>${DN[i]}</td><td>${SCH[i].map(([a,b])=>hm(a)+'–'+hm(b)).join(' · ')}</td></tr>`).join('');
+  const lbl=(i,k)=>SCH[i].length===2?(k?'jantar ':'almoço '):'';
+  tb.innerHTML=order.map(i=>`<tr class="${i===d?'today':''}${SCH[i].length?'':' closed'}"><td>${DN[i]}</td><td>${SCH[i].length?SCH[i].map(([a,b],k)=>lbl(i,k)+hm(a)+'–'+hm(b)).join(' · '):'Fechado'}</td></tr>`).join('');
   const st=document.getElementById('status'),tx=document.getElementById('statusTxt');
   const cur=SCH[d].find(([a,b])=>m>=a&&m<b);
   if(cur){st.classList.add('open');tx.textContent=`Brasa acesa · fecha às ${hm(cur[1])}`;return}
   st.classList.remove('open');
   const next=SCH[d].find(([a])=>m<a);
   if(next){tx.textContent=`Brasa descansando · abre hoje às ${hm(next[0])}`;return}
-  const nd=(d+1)%7;tx.textContent=`Brasa descansando · abre ${nd===(d+1)%7?'amanhã':DN[nd]} às ${hm(SCH[nd][0][0])}`;
+  let nd=(d+1)%7;while(!SCH[nd].length)nd=(nd+1)%7;
+  tx.textContent=`Brasa descansando · abre ${nd===(d+1)%7?'amanhã':DN[nd].toLowerCase()} às ${hm(SCH[nd][0][0])}`;
 }
 function rh(){renderHours();const h=document.getElementById('heroStatus');if(h)h.textContent=document.getElementById('statusTxt').textContent}
 rh();setInterval(rh,60000);
@@ -796,12 +801,13 @@ const iso=dt=>dt.toLocaleDateString('en-CA',{timeZone:'America/Sao_Paulo'});
 fD.min=iso(new Date());fD.value=fD.min;
 function fillSlots(){const d=new Date(fD.value+'T12:00:00').getDay();const opts=[];
   const now=spNow(),isToday=fD.value===fD.min;(SCH[d]||[]).forEach(([a,b])=>{for(let t=a;t<=b-60;t+=30)if(!isToday||t>now.m+30)opts.push(t)});
-  if(!opts.length){fH.innerHTML='<option value="">Sem horários hoje — escolha outra data</option>';return}
+  if(!opts.length){fH.innerHTML=`<option value="">${SCH[d].length?'Sem horários hoje':'Fechado neste dia'} — escolha outra data</option>`;return}
   const label=t=>`${String(Math.floor(t/60)).padStart(2,'0')}:${String(t%60).padStart(2,'0')}`;
   fH.innerHTML=opts.map(t=>`<option>${label(t)}</option>`).join('')}
 fD.addEventListener('change',fillSlots);fillSlots();
 document.getElementById('resForm').addEventListener('submit',e=>{e.preventDefault();const f=e.target;
   if(!f.nome.value.trim()){f.nome.focus();f.nome.style.borderColor='#e2541b';return}
+  if(!fH.value){fH.focus();fH.style.borderColor='#e2541b';return}
   const dt=new Date(fD.value+'T12:00:00').toLocaleDateString('pt-BR',{weekday:'long',day:'2-digit',month:'2-digit'});
   const msg=`Olá! Vim pelo site e gostaria de reservar uma mesa.\n\n• Nome: ${f.nome.value.trim()}\n• Pessoas: ${n}\n• Data: ${dt}\n• Horário: ${fH.value}`;
   open(`https://wa.me/5511993956402?text=${encodeURIComponent(msg)}`,'_blank','noopener')});
